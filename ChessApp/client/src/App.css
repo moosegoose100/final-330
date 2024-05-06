@@ -1,0 +1,218 @@
+.container 
+{
+  /* Centering */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sign-in
+{
+  /* Sign-in Box Design */
+  background-color: rgb(199, 199, 199);
+  width: 350px;
+  height: 400px;
+  border: 3px solid black;
+
+  /* Content Positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:0;
+  margin:0;
+}
+
+/* Adjustment To Make Vertical Spacing Look Better (More Centered) */
+.sign-in h1
+{
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 40px;
+}
+
+.sign-in input
+{
+  width: 200px;
+  height: 50px;
+  font-size: 28px;
+}
+
+.sign-in button
+{
+  width: 200px;
+  height: 50px;
+  font-size: 35px;
+}
+
+/* This Is A Fix I Found For Spacing Issues Between Divs */
+/* https://stackoverflow.com/questions/55073012/clearing-space-between-two-divs */
+#chatbox
+{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 10px;
+  right: 60px;
+  width: 480px;
+  height: 840px;
+  border: 3px solid black;
+}
+
+#chat-header
+{
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(64, 64, 65);
+  color: white;
+  text-align: center;
+  line-height: 5px;
+  border-bottom: 3px solid black;
+}
+
+#chat-body
+{
+  margin: 0px;
+  padding: 0px;
+  height: 90%; /* Fixes Weird Cutting Off Issue When Chatbox Extends */
+  background-color: rgb(193, 195, 196);
+}
+
+/*Scroll-To-Bottom Auto Control*/
+.msg-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.msg-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Displayed Messages */
+.message {
+  height: auto;
+  padding: 5px;
+  display: flex;
+}
+
+#text-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  min-width: 65px;
+  max-width: 300px; /* Limit To Look Like Normal Messaging Apps*/
+  text-align: left;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  /* Prevent Sidescrolling Long Messages*/
+  /* Breaks into multiple lines instead*/
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* For Player Messages */
+#my-message {
+  justify-content: flex-end;
+}
+
+#my-message #message-content {
+  justify-content: flex-end;
+}
+
+/* Styles For Opponent Messages*/
+#their-message {
+  justify-content: flex-start;
+}
+
+#their-message #text-content {
+  justify-content: flex-start;
+  background-color: #49c44f;
+}
+
+/* All Messages Data */
+#message-data {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+#sender-name{
+  font-weight: bolder;
+  align-items: flex-start;
+  margin-left: 2px;
+}
+
+#send-time{
+  align-items: flex-end;
+  margin-right: 2px;
+}
+
+/* Footer Is For Chat Input */
+#chat-footer
+{
+  height: 35px;
+  border-top: 3px solid black;
+}
+
+#chat-footer input
+{
+  height: 80%;
+  width: 80%;
+  font-size: 20px;
+  outline: none;
+}
+
+#chat-footer button
+{
+  height: 100%;
+  width: 18.25%; /* Just Added Values Here Until It Fit Well*/
+  font-size: 20px;
+}
+
+.game-container
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+#chess-container
+{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  left: 20px;
+  top: 20px;
+  justify-content: space-between;
+}
+
+#gameBoard
+{
+  display: flex;
+  width: 775px;
+  height: 775px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 10px;
+}
