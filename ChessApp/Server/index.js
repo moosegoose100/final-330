@@ -7,6 +7,7 @@
 // Documentation For Cors (Troubleshoots Issues For Socket.io) https://www.npmjs.com/package/cors
 
  // I'm Using The Legacy Method To Import These Because I Don't Know If ChessboardJS Supports ESM Syntax And Don't Want Any Issues Later
+var $ = require("jquery");
 const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
